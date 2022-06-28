@@ -10,6 +10,52 @@ in the detailed section referring to by linking pull requests or issues.
 ## [Unreleased]
 
 ### Overview
+=======
+
+*
+
+### Detailed Changes
+
+#### Added
+
+* Event Framework for Asset entity (#1453)
+* Event Framework for PolicyDefinition entity (#1437)
+* SQL Translation layer (#1357, #1459)
+* Permit API verbose error response (#1479)
+* Fix TODO and document `:extensions:data-plane-transfer` (#1519)
+
+#### Changed
+
+* Provided default no-op `TransactionContext` (#1461)
+* Refactored query capabilities for `Asset` (#1459)
+* Refactored query capabilities for `ContractDefinition` (#1458)
+* Refactored state machine and in-memory persistence (#1511)
+* Token based Authentication can retrieve key from vault (#1537)
+* JWT audience claim check with DID (#1520)
+
+#### Removed
+
+* Old RegistrationService (was used for a PoC) (#164)
+* Deprecated `InlineDataFlowController` (replaced by the Data Plane) (#1464)
+* Unused classes and interfaces at `ids.spi.policy` (#1471)
+* Remove modules `:extensions:transfer-functions:transfer-functions-spi` and `:extensions:transfer-functions:transfer-functions-core` (#1482)
+* Remove `ConnectorVersionProvider`, provide version as static string (#1470)
+* Remove `samples/other/run-from-junit` (#1456)
+
+#### Fixed
+
+* Fixed a dead link in contributor documentation (#1477)
+* Fix usage of `NAME` property in `HttpDataSourceFactory` (#1460)
+* Fix clearing Loaders in the FCC (#1495)
+* Avoid endless loops in `ContractNegotiationManager` (#1487)
+* Fix race condition in `ContractNegotiationIntegrationTest` (#1505)
+* Fix for change in Cosmos DB behavior on missing sort fields (#1514)
+* Effectively removed default LIMIT in SQL Contract Def Store (#1515)
+
+## [milestone-4] - 2022-06-07
+
+### Overview
+
 * Bugfixing DataManagementApi
 * Build improvements
 * Improvements to Dependency Resolution
